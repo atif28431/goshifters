@@ -39,9 +39,9 @@ const ServicesSection = () => {
         {services.map((service, index) => (
           <Card
             key={index}
-            className="hover:shadow-xl hover:bg-red-50 transition-shadow flex relative overflow-hidden"
+            className="hover:shadow-xl hover:bg-red-50 transition-shadow relative overflow-hidden block lg:flex"
           >
-            <div className="bg-red-200 h-fit rounded-full p-3 mt-5 ml-5">
+            <div className="bg-red-200 h-fit rounded-full p-3 mt-5 ml-5 w-fit">
               <Image
                 src={service.icon}
                 alt={`${service.title} Icon`}

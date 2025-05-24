@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <section className="hero mx-auto">
       <div className="bg-white py-16 px-8 md:flex md:items-center md:justify-between ">
-        <div className="mr-20 md:w-1/2">
+        <div className="md:mr-20 md:w-1/2 sm:w-100 sm:mr-0">
           <h1 className="text-2xl font-semibold text-gray-700 mb-2">
             Welcome To Go Shifters
           </h1>

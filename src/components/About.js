@@ -22,7 +22,7 @@ export default function Navbar() {
             }}
           ></Image>
         </div>
-        <div className="ml-20 md:w-1/2">
+        <div className="lg:ml-20 md:w-1/2 sm:ml-0 mt-5 md:mt-0">
           <h2 className="text-3xl font-bold text-gray-700 mb-4 leading-tight">
             we have <span className="text-red-400">5+ years</span> of experience
             give you better results!

@@ -1,13 +1,14 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-red-500 text-white py-8 px-4 md:px-16">
-      <div className="grid grid-cols-1 md:grid-cols-9 gap-5 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-7 gap-5 md:justify-items-center lg:justify-between">
         {/* Logo and Address */}
-        <div className="md:col-span-5">
+        <div className="md:col-span-3">
           <h2 className="text-lg font-bold">GO SHIFTERS</h2>
           <p className="mt-2 text-sm">
             Tambe Apt., Shivaji wadi, behind Hanuman Temple, Savarkar Nagar,
@@ -24,10 +25,18 @@ export default function Footer() {
             </Button>
           </form>
           <div className="flex mt-4 gap-4">
-            {/* Social Media Icons 
-            <Image alt="" src="logo.png" width={20} height={20}></Image>
-            <Image alt="" src="logo.png" width={20} height={20}></Image>
-            */}
+            <Image
+              alt=""
+              src="/Assets/Images/insta.png"
+              width={20}
+              height={20}
+            ></Image>
+            <Image
+              alt=""
+              src="/Assets/Images/fb.png"
+              width={20}
+              height={20}
+            ></Image>
           </div>
         </div>
 
