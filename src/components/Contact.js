@@ -200,7 +200,7 @@ const ContactUs = () => {
               </CardHeader>
               <CardContent className="p-2">
                 <p className="text-gray-800 text-base -mt-4">
-                  info@goshifters.com
+                  info@goshifters.in
                 </p>
               </CardContent>
             </div>
@@ -225,7 +225,7 @@ const ContactUs = () => {
               </CardHeader>
               <CardContent className="p-2">
                 <p className="text-gray-800 text-base -mt-4">
-                  <a href="tel:+917208132467">+91 720 813 2467</a> /{" "}
+                  <a href="tel:+919136211721">+91 9136211721</a> /{" "}
                   <a href="tel:+918104494579">+91 8104494579</a>
                 </p>
               </CardContent>

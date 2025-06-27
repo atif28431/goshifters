@@ -22,8 +22,9 @@ export default function Navbar() {
             <Image
               src="/Assets/Images/navlogo.svg"
               alt="Logo"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
+              className="rotate-90 transform"
             />
             <div className="text-primary-500 font-bold uppercase">
               GoShifters

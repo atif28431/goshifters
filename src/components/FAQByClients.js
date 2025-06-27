@@ -10,43 +10,43 @@ import {
 import Image from "next/image";
 const FAQByClients = () => {
   const [faqData] = useState([
-    {
-      id: "insurance",
-      question: "Is there any insurance available for the goods?",
-      answer: "Yes. It adheres to the WAI-ARIA design pattern.",
-    },
-    {
-      id: "payment-options",
-      question: "What are the payment options available?",
-      answer:
-        "Payment options include credit card, debit card, and online banking.",
-    },
-    {
-      id: "services",
-      question: "What services do Go Shifters offer?",
-      answer: "We offer packing, moving, and storage solutions.",
-    },
-    {
-      id: "tracking",
-      question: "Can I track my shipments?",
-      answer: "Yes, tracking is available through our online platform.",
-    },
-    {
-      id: "hidden-charges",
-      question: "Are there any hidden charges?",
-      answer: "No, we maintain transparency in our pricing.",
-    },
-    {
-      id: "cancel-order",
-      question: "Can I cancel my shifting or order change dates?",
-      answer:
-        "Yes, cancellations or date changes are allowed with prior notice.",
-    },
-    {
-      id: "prohibited-items",
-      question: "What are the items that are prohibited by Go Shifters?",
-      answer: "Prohibited items include hazardous materials and illegal goods.",
-    },
+   {
+  id: "insurance",
+  question: "Is there any insurance available for the goods?",
+  answer: "Currently, we do not provide insurance coverage for goods. We recommend customers take necessary precautions for valuable items.",
+},
+{
+  id: "payment-options",
+  question: "What are the payment options available?",
+  answer:
+    "We accept a variety of payment methods including credit card, debit card, online banking, UPI, and QR code payments for your convenience.",
+},
+{
+  id: "services",
+  question: "What services do Go Shifters offer?",
+  answer: "Go Shifters provides comprehensive packing, moving, and secure storage solutions tailored to your needs.",
+},
+{
+  id: "tracking",
+  question: "Can I track my shipments?",
+  answer: "Yes, you can easily track your shipments through our online platform for real-time updates.",
+},
+{
+  id: "hidden-charges",
+  question: "Are there any hidden charges?",
+  answer: "No, our pricing is fully transparent. There are no hidden charges—what you see is what you pay.",
+},
+{
+  id: "cancel-order",
+  question: "Can I cancel my shifting or change the dates?",
+  answer:
+    "Yes, you can cancel or reschedule your booking within 12 hours at no extra cost. After 12 hours, a 10% cancellation fee will apply.",
+},
+{
+  id: "prohibited-items",
+  question: "What items are prohibited by Go Shifters?",
+  answer: "Prohibited items include hazardous materials, illegal goods, and any items restricted"
+}
   ]);
 
   return (

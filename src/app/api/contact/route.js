@@ -73,21 +73,22 @@ export async function POST(req) {
       Dear ${name || "Customer"},
     </p>
     <p style="color: #333; margin-bottom: 18px;">
-      We have received your inquiry and our team will review your request promptly. One of our representatives will get in touch with you soon to assist you further.
+      We appreciate your interest in Go Shifters. Your inquiry has been received and our team will review your request promptly. Here’s what you can expect next:
     </p>
-    <div style="margin-bottom: 18px;">
-      <strong>Summary of your request:</strong>
-      <ul style="color: #444; margin: 8px 0 0 16px; padding: 0;">
-        <li><strong>Name:</strong> ${name}</li>
-        <li><strong>Phone:</strong> ${phone}</li>
-        <li><strong>Email:</strong> ${email}</li>
-        <li><strong>Shifting Type:</strong> ${shifting}</li>
-        <li><strong>Delivery Date:</strong> ${deliveryDate}</li>
-        <li><strong>Pickup Address:</strong> ${pickup}</li>
-        <li><strong>Delivery Address:</strong> ${delivery}</li>
-        ${message ? `<li><strong>Message:</strong> ${message}</li>` : ""}
-      </ul>
-    </div>
+    <ol style="color: #444; margin: 0 0 18px 18px; padding: 0;">
+      <li style="margin-bottom: 8px;">
+        <strong>Order Placement:</strong> Your shifting request has been placed successfully.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Booking Verification:</strong> Our customer service team will verify your booking details, including the confirmation date, pickup and drop locations, and preferred time.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Supervisor Visit:</strong> After confirmation, a supervisor will visit your premises the next day to conduct a survey and inspect/count your household goods.
+      </li>
+    </ol>
+    <p style="color: #d32f2f; font-size: 14px; margin-bottom: 18px;">
+      <strong>Note:</strong> If the supervisor visit is completed and you choose to cancel your shifting booking afterwards, a 10% cancellation charge will be applicable.
+    </p>
     <p style="color: #333; margin-bottom: 18px;">
       If you have any urgent questions, feel free to reply to this email or call us at <a href="tel:+917208132467" style="color: #d32f2f; text-decoration: none;">+91 720 813 2467</a>.
     </p>
@@ -97,7 +98,7 @@ export async function POST(req) {
     </p>
     <div style="margin-top: 24px; text-align: center;">
       <img src="https://goshifters.com/logo.png" alt="Go Shifters Logo" style="height: 40px;"/>
-    </div>
+   </div>
   </div>
 `
   };

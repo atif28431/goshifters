@@ -1,5 +1,6 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 import Image from "next/image";
 
@@ -17,7 +18,7 @@ export default function Footer() {
           <form className="mt-4 flex gap-2">
             <Input
               type="email"
-              placeholder="ark102@gmail.com"
+              placeholder="abcd@example.com"
               className="bg-white text-black placeholder:text-gray-500"
             />
             <Button type="submit" variant="default">
@@ -25,12 +26,13 @@ export default function Footer() {
             </Button>
           </form>
           <div className="flex mt-4 gap-4">
+            <Link href="https://www.instagram.com/goshifters?igsh=OGM2ZWxkdXF6ZjF1" target="_blank">
             <Image
               alt=""
               src="/Assets/Images/insta.png"
               width={20}
               height={20}
-            ></Image>
+            ></Image></Link>
             <Image
               alt=""
               src="/Assets/Images/fb.png"
