@@ -1,19 +1,30 @@
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
+console.log(process.env.EMAIL_PASS);
   const body = await req.json();
   const { name, phone, email, shifting, deliveryDate, pickup, delivery, message } = body;
-
-  // Configure transporter
+	
+  // Alternative Hostinger configuration
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.hostinger.com",
+    port: 465,
+    secure: true, // Use STARTTLS
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
     },
+    tls: {
+      rejectUnauthorized: false,
+      ciphers: 'SSLv3'
+    },
+    requireTLS: true,
+    connectionTimeout: 60000,
+    greetingTimeout: 30000,
+    socketTimeout: 60000,
   });
 
-  // Email to admin
+  // Rest of your email code remains the same...
   const adminMailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,
@@ -61,7 +72,6 @@ export async function POST(req) {
 `
   };
 
-  // Thank you email to user
   const userMailOptions = {
     from: process.env.EMAIL_USER,
     to: email,
@@ -73,7 +83,7 @@ export async function POST(req) {
       Dear ${name || "Customer"},
     </p>
     <p style="color: #333; margin-bottom: 18px;">
-      We appreciate your interest in Go Shifters. Your inquiry has been received and our team will review your request promptly. Here’s what you can expect next:
+      We appreciate your interest in Go Shifters. Your inquiry has been received and our team will review your request promptly. Here's what you can expect next:
     </p>
     <ol style="color: #444; margin: 0 0 18px 18px; padding: 0;">
       <li style="margin-bottom: 8px;">
@@ -108,6 +118,10 @@ export async function POST(req) {
     await transporter.sendMail(userMailOptions);
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
-    return new Response(JSON.stringify({ error: "Failed to send email." }), { status: 500 });
+    console.error("Hostinger email error:", error);
+    return new Response(JSON.stringify({ 
+      error: "Failed to send email via Hostinger.", 
+      details: error.message 
+    }), { status: 500 });
   }
 }
